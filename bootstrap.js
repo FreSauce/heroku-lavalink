@@ -4,8 +4,8 @@ const fetch = require("node-fetch")
 
 let application = fs.readFileSync("./application.yml", "utf8")
 
-if (process.env.PORT) {
-    application = application.replace("DYNAMICPORT", process.env.PORT)
+if (5000) {
+    application = application.replace("DYNAMICPORT", 5000)
 }
 
 if (process.env.PASS) {
