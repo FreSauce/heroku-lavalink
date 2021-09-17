@@ -4,13 +4,6 @@ const fetch = require("node-fetch")
 
 let application = fs.readFileSync("./application.yml", "utf8")
 
-if (5000) {
-    application = application.replace("DYNAMICPORT", 5000)
-}
-
-if (process.env.PASS) {
-    application = application.replace("youshallnotpass", process.env.PASS)
-}
 fs.writeFileSync("./application.yml", application)
 
 const download = function (url, dest, cb) {
